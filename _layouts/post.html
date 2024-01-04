@@ -1,0 +1,127 @@
+{% include head.html %}
+{% include navigation.html %}
+{% include post-title.html %}
+    <!--Sidebar Page Container-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+                <!--Content Side / Blog Detail-->
+                <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                    <div class="blog-detail">
+                		<div class="image-box">
+                			<figure class="image"><img src="images/resource/news-single.jpg" alt=""></figure>
+                		</div>
+                		<div class="lower-content">
+                			<div class="post-date">{{ page.date }}</div>
+							<h3>{{ page.title }}</h3>
+							<ul class="post-info">
+								<li>by <a href="#">Gamon</a></li>
+								<li><a href="#">2 Comments</a></li>
+								<li><a href="#">15 Likes</a></li>
+							</ul>
+                            {{ content }}
+                		</div>
+                    </div>
+
+                    <!-- Other Options -->
+                    <div class="post-share-options clearfix">
+                        <div class="pull-left">
+                            <ul class="tags">
+                                <li><a href="#">Gaming</a></li>
+                                <li><a href="matches.html">Matches</a></li>
+                                <li><a href="#">Players</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="social-links pull-right">
+                            <ul class="social-links">
+                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                                <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                    <aside class="sidebar">
+                    	<!-- Search -->
+                        <div class="sidebar-widget search-box">
+                            <form method="post" action="contact.html">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="Search" required>
+                                    <button type="submit"><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Post Widget -->
+                        <div class="sidebar-widget popular-posts">
+                            <div class="widget-content">
+                                <h4 class="sidebar-title">Recent Posts</h4>
+                                <article class="post">
+                                    <div class="post-inner">
+                                        <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-1.jpg" alt=""></a></figure>
+                                        <div class="post-info">16 May 2019</div>
+                                        <div class="text"><a href="blog-single.html">Lion king vs wolf smart upcoming matches</a></div>
+                                    </div>
+
+                                </article>
+                                
+                                <article class="post">
+                                    <div class="post-inner">
+                                        <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-2.jpg" alt=""></a></figure>
+                                        <div class="post-info">11 May 2019</div>
+                                        <div class="text"><a href="blog-single.html">How to become a register user on gamon</a></div>
+                                    </div>
+                                </article>
+
+                                <article class="post">
+                                    <div class="post-inner">
+                                        <figure class="post-thumb"><a href="blog-single.html"><img src="images/resource/post-thumb-3.jpg" alt=""></a></figure>
+                                        <div class="post-info">10 May 2019</div>
+                                        <div class="text"><a href="blog-single.html">Last matches champions advices for</a></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget popular-tags">
+                            <div class="widget-content">
+                                <h4 class="sidebar-title">popular tags</h4>
+                                <a href="matches.html">Matches</a>
+                                <a href="#">tournaments</a>
+                                <a href="#">champions</a>
+                                <a href="#">Players</a>
+                                <a href="#">Game</a>
+                                <a href="#">esport</a>
+                                <a href="#">video</a>
+                            </div>
+                        </div>
+
+                        <!-- Category Widget -->
+                        <div class="sidebar-widget categories">
+                            <div class="widget-content">
+                                <h4 class="sidebar-title">Categories</h4>
+                                <!-- Blog Category -->
+                                <ul class="blog-categories">
+                                    <li><a href="blog-single.html">Gaming</a></li>
+                                    <li><a href="blog-single.html">Matches</a></li>
+                                    <li><a href="blog-single.html">Video games</a></li>
+                                    <li><a href="blog-single.html">Esports</a></li>
+                                    <li><a href="blog-single.html">Champions</a></li>
+                                </ul>
+                            </div>
+                        </div>           
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar Page Container -->
+{% include footer.html %}
