@@ -1,0 +1,44 @@
+---
+title: store
+layout: default
+---
+{% include store-title.html %}
+<!-- Gallery Section Three -->
+<section class="gallery-section-three">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInDown">
+                <p>area for tags</p>
+            </div>
+        </div>
+    </div>
+    <div class="auto-container">
+        
+        <div class="row clearfix">
+        
+            {% for item in site.store reversed %}
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft {% for tag in item.tags %}shop-{{ tag }} {% endfor %}" data-wow-delay="0ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="{{ item.image }}" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="{{ item.url }}" style="color:#fff"><h2>{{item.title}}</h2></a>
+                                    <p style="padding: 10px 15px 15px 15px;color: #fff;">{{ item.description }}</p>
+                                    <a href="{{ item.url }}" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        
+    </div>
+    
+</section>

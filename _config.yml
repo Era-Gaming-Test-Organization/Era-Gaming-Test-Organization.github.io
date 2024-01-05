@@ -30,6 +30,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 collections:
   creators:
     output: true
+  store:
+    output: true
+    sort_by: date
+
 # Build settings
 theme: 
 plugins:
