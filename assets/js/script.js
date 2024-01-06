@@ -37,6 +37,32 @@
 		
 	}
 
+	//Store Tag Toggle
+	// TODO Automate the below scripts to pull from tags automagically in jekyll
+	$("#shop-all").click(function(){
+		$(".shop-all").show( );
+	});
+	$("#shop-popular").click(function(){
+		$(".shop-all").hide();
+		$(".shop-popular").show();
+	});
+	$("#shop-tshirts").click(function(){
+		$(".shop-all").hide();
+		$(".shop-tshirts").show();
+	});
+	$("#shop-sweaters").click(function(){
+		$(".shop-all").hide();
+		$(".shop-sweaters").show();
+	});
+	$("#shop-hats").click(function(){
+		$(".shop-all").hide();
+		$(".shop-hats").show();
+	});
+	$("#shop-accessories").click(function(){
+		$(".shop-all").hide();
+		$(".shop-accessories").show();
+	});
+
 	//Mobile Nav Hide Show
 	if($('.mobile-menu').length){
 		

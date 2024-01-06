@@ -7,8 +7,8 @@ layout: default
 <section class="gallery-section-three">
     <div class="auto-container">
         <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInDown">
-                <p>area for tags</p>
+            <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInDown" style="margin-bottom: 55px !important;">
+                <p><span class="theme-btn btn-style-one"><span id="shop-all" class="btn-title">all</span></span><span class="theme-btn btn-style-one"><span id="shop-popular" class="btn-title">popular</span></span><span class="theme-btn btn-style-one"><span id="shop-tshirts" class="btn-title">t-shirts</span></span><span class="theme-btn btn-style-one"><span id="shop-sweaters" class="btn-title">sweaters</span></span><span class="theme-btn btn-style-one"><span id="shop-hats" class="btn-title">hats</span></span><span class="theme-btn btn-style-one"><span id="shop-accessories" class="btn-title">accessories</span></span></p>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@ layout: default
         
             {% for item in site.store reversed %}
             <!--Gallery Item-->
-            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft {% for tag in item.tags %}shop-{{ tag }} {% endfor %}" data-wow-delay="0ms">
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft shop-all {% for tag in item.tags %}shop-{{ tag }} {% endfor %}" data-wow-delay="0ms">
                 <div class="inner-box">
                     <figure class="image-box">
                         <img src="{{ item.image }}" alt="">

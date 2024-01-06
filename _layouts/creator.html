@@ -1,4 +1,60 @@
 {% include head.html %}
 {% include navigation.html %}
-{{ content }}
+<!-- Player Section -->
+<section class="player-info-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Text Column-->
+            <div class="text-column col-lg-6 col-md-6 col-sm-12">
+                <div class="inner wow fadeInRight">
+                    <div class="title-box">
+                        <div class="user-title">{{ page.alias }}</div>
+                        <div class="user-info">20 Games Played  .  40 Level Completed</div>
+                    </div>
+                    <div class="text">{{content}}</div>
+                    <ul class="social-icons">
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Image Column-->
+            <div class="image-column col-lg-6 col-md-6 col-sm-12">
+                <div class="inner wow fadeInLeft">
+                    <figure class="image"><img src="/assets/images/resource/about-4.jpg" alt=""></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+<!--Awards Section-->
+<section class="awards-section">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <div class="title">Check My All</div>
+            <h2>achievements</h2>
+        </div>
+        <div class="awards-outer">
+            <!--Awards Carousel-->
+            <ul class="awards-carousel owl-carousel owl-theme">
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/1.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/2.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/3.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/4.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/5.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/1.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/2.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/3.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/4.png" alt=""></a></figure></li>
+                <li class="slide-item"><figure class="image-box"><a href="#"><img src="/assets/images/awards/5.png" alt=""></a></figure></li>
+            </ul>
+        </div>
+        
+    </div>
+</section>
+<!--End Awards Section-->
 {% include footer.html %}
