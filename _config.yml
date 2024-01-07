@@ -34,10 +34,19 @@ collections:
     output: true
     sort_by: date
 
+page_gen-dirs: true
+
+page_gen: 
+  - data: 'ContentCreators'
+    template: 'creator'
+    name: 'name'
+    dir: 'creators'
+
 # Build settings
 theme: 
 plugins:
   - jekyll-feed
+  - jekyll-datapage-generator
 
 # Exclude from processing.
 # The following items will not be processed, by default.

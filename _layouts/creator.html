@@ -8,22 +8,22 @@
             <div class="text-column col-lg-6 col-md-6 col-sm-12">
                 <div class="inner wow fadeInRight">
                     <div class="title-box">
-                        <div class="user-title">{{ page.alias }}</div>
-                        <div class="user-info">20 Games Played  .  40 Level Completed</div>
+                        <div class="user-title">{{ page.displayname }}</div>
+                        <div class="user-info">Member Since {{ page.membersince }}  .  {{ page.country }}</div>
                     </div>
-                    <div class="text">{{content}}</div>
+                    <div class="text">{{ page.description }}</div>
                     <ul class="social-icons">
-                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        {% if page.twitch %} <li><a href="{{ page.twitch }}"><span class="fab fa-twitch"></span></a></li>{% endif %}
+                        {% if page.tiktok %}<li><a href="{{ page.tiktok }}"><span class="fab fa-instagram"></span></a></li>{% endif %}
+                        {% if page.instagram %}<li><a href="{{ page.instagram }}"><span class="fab fa-instagram"></span></a></li> {% endif %}
+                        {% if page.twitter %}<li><a href="{{ page.twitter }}"><span class="fab fa-twitter"></span></a></li>{% endif %}
                     </ul>
                 </div>
             </div>
             <!--Image Column-->
             <div class="image-column col-lg-6 col-md-6 col-sm-12">
                 <div class="inner wow fadeInLeft">
-                    <figure class="image"><img src="/assets/images/resource/about-4.jpg" alt=""></figure>
+                    <figure class="image"><img src="{%for image in page.image%}{{image.url}}{% endfor %}" alt=""></figure>
                 </div>
             </div>
         </div>
@@ -31,12 +31,13 @@
 </section>
 <!-- End About Section -->
 
-<!--Awards Section-->
+{% if page.merch %}
+<!--MERCH Section-->
 <section class="awards-section">
     <div class="auto-container">
         <div class="sec-title centered">
-            <div class="title">Check My All</div>
-            <h2>achievements</h2>
+            <div class="title">Check Out My</div>
+            <h2>merch</h2>
         </div>
         <div class="awards-outer">
             <!--Awards Carousel-->
@@ -56,5 +57,186 @@
         
     </div>
 </section>
-<!--End Awards Section-->
+<!--End merch Section-->
+{% endif %}
+
+{% if page.showgallery %}
+<section class="gallery-section-three">
+    
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <div class="title">Check Out My</div>
+            <h2>Artwork</h2>
+        </div>
+        
+        <div class="row clearfix">
+        
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/17.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/17.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="300ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/18.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/18.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/19.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/19.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/20.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/20.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="300ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/21.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/21.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/22.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/22.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/23.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/23.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="300ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/24.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/24.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!--Gallery Item-->
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="600ms">
+                <div class="inner-box">
+                    <figure class="image-box">
+                        <img src="images/gallery/25.jpg" alt="">
+                        <!--Overlay Box-->
+                        <div class="overlay-box">
+                            <div class="overlay-inner">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-unlink"></span></a>
+                                    <a href="images/gallery/25.jpg" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-add"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</section>
+{% endif %}
 {% include footer.html %}
