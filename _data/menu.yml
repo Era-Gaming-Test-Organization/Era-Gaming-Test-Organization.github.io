@@ -7,22 +7,19 @@
 - title: SERVICES
   link: /services
 
-  submenu: 
+  submenu:
+    - title: Event Services
+      link: /services/event-services
 
-    - title: Event Setup
-      link: /services/event-setup
-
-    - title: Production
+    - title: Broadcast Production
       link: /services/production
 
     - title: Consulting
       link: /services/consulting
 
-    - title: Creators
-      link: /services/creators
 
 - title: CONTENT CREATORS
-  link: /content-creators
+  link: /creators
 
   submenu:
     - title: YD Average Nerd
@@ -36,6 +33,9 @@
 
     - title: DonBukka
       link: /creators/donbukka
+
+    - title: Affiliates
+      link: /affiliates
 
 - title: STORE
   link: /store
