@@ -51,14 +51,14 @@ font-family: 'Roboto Condensed', sans-serif;
 
 */
 
-@import url('fontawesome-all.css');
-@import url('animate.css');
-@import url('flaticon.css');
-@import url('owl.css');
-@import url('jquery-ui.css');
-@import url('jquery.fancybox.min.css');
-@import url('scrollbar.css');
-@import url('hover.css');
+@import url('/assets/css/fontawesome-all.css');
+@import url('/assets/css/animate.css');
+@import url('/assets/css/flaticon.css');
+@import url('/assets/css/owl.css');
+@import url('/assets/css/jquery-ui.css');
+@import url('/assets/css/jquery.fancybox.min.css');
+@import url('/assets/css/scrollbar.css');
+@import url('/assets/css/hover.css');
 
 /*** 
 
