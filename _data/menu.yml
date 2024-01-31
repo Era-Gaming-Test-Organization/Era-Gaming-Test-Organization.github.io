@@ -9,13 +9,13 @@
 
   submenu:
     - title: Event Services
-      link: /services/event-services
+      link: /event-services
 
     - title: Broadcast Production
-      link: /services/production
+      link: /broadcast-production
 
     - title: Consulting
-      link: /services/consulting
+      link: /consulting
 
 
 - title: CONTENT CREATORS
