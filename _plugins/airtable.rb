@@ -1,6 +1,7 @@
 require 'dotenv/load'
 require 'airtable'
 require 'active_support/all'
+require 'yaml'
 
 airtable = Airtable::Client.new(ENV['AIRTABLE_API_KEY'])
 table = airtable.table(ENV['AIRTABLE_BASE'], ENV['AIRTABLE_TABLE'])
@@ -11,3 +12,5 @@ File.open("_data/#{ENV['AIRTABLE_TABLE']}.yml", 'w') do |file|
 
   file.write(warning, data.to_yaml)
 end
+
+airtable_array = yaml.load(File.read("_data/#{ENV['AIRTABLE_TABLE']}.yml"))
