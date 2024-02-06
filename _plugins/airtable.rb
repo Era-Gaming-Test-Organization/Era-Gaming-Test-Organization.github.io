@@ -12,5 +12,3 @@ File.open("_data/#{ENV['AIRTABLE_TABLE']}.yml", 'w') do |file|
 
   file.write(warning, data.to_yaml)
 end
-
-airtable_array = yaml.load(File.read("_data/#{ENV['AIRTABLE_TABLE']}.yml"))
