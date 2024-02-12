@@ -33,10 +33,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        env: 
-          AIRTABLE_API_KEY: ${{secrets.AIRTABLE_API_KEY}}
-          AIRTABLE_BASE: ${{secrets.AIRTABLE_BASE}}
-          AIRTABLE_TABLE: ${{secrets.AIRTABLE_TABLE}}
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
@@ -50,6 +46,9 @@ jobs:
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
+          AIRTABLE_API_KEY: ${{secrets.AIRTABLE_API_KEY}}
+          AIRTABLE_BASE: ${{secrets.AIRTABLE_BASE}}
+          AIRTABLE_TABLE: ${{secrets.AIRTABLE_TABLE}}
           JEKYLL_ENV: production
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
