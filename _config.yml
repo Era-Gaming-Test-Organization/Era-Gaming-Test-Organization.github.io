@@ -8,7 +8,7 @@ collections:
   posts:
     title: Posts
     output: true
-  _store:
+  store:
     title: Store
     output: true
     sort_by: date
