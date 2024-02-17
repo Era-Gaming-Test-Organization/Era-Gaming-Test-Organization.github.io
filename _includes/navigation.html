@@ -37,7 +37,7 @@
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix pull-left">
                                 {% for item in site.data.menu limit:3 %}
-                                <li class="{% if item.link == page.url %}current{% endif %} {% if item.submenu %}dropdown {% endif %}"><a href="{{item.link}}">{{item.title}}</a>
+                                <li class="{% if item.link == page.url %}current{% endif %} {% if item.submenu %}dropdown {% endif %}"><a {% if item.link %} href="{{item.link}}"{% endif %}>{{item.title}}</a>
                                     <ul>
                                         {% for entry in item.submenu %}
                                         <li><a href="{{entry.link}}">{{entry.title}}</a></li>
