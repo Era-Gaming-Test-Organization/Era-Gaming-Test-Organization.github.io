@@ -2199,6 +2199,40 @@ img{
 	margin-bottom:40px;
 }
 
+
+/*** 
+
+====================================================================
+	Legal Section
+====================================================================
+
+***/
+
+.legal {
+	text-align: left !important;
+}
+.legal h3 {
+	color: #fff;
+
+}
+
+.legal p{
+	color: #999;
+	padding-bottom: 1.5em;
+}
+
+.legal ul, .legal li{
+	font-size: 16px;
+	color: #999;
+	list-style: disc !important;
+	list-style-position: inside;
+}
+
+.legal ul {
+	padding-bottom: 1.5em;
+	margin-left: 1.5em;
+}
+
 /*** 
 
 ====================================================================
