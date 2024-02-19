@@ -10,16 +10,14 @@
                 <div class="content-side col-lg-8 col-md-12 col-sm-12">
                     <div class="blog-detail">
                 		<div class="image-box">
-                			<figure class="image"><img src="images/resource/news-single.jpg" alt=""></figure>
+                			<figure class="image"><img src="{{ page.image }}" alt=""></figure>
                 		</div>
                 		<div class="lower-content">
-                			<div class="post-date">{{ page.date }}</div>
-							<h3>{{ page.title }}</h3>
-							<ul class="post-info">
-								<li>by <a href="#">Gamon</a></li>
-								<li><a href="#">2 Comments</a></li>
-								<li><a href="#">15 Likes</a></li>
-							</ul>
+                			<div class="post-date">{{ page.date | date: "%-d %B %Y"}}</div>
+							<h2>{{ page.title }}</h2>
+							<div class="post-info">
+							<p>by <a href="#">{{ page.author }}</a></p>
+                            </div>
                             {{ content }}
                 		</div>
                     </div>
@@ -28,9 +26,9 @@
                     <div class="post-share-options clearfix">
                         <div class="pull-left">
                             <ul class="tags">
-                                <li><a href="#">Gaming</a></li>
-                                <li><a href="matches.html">Matches</a></li>
-                                <li><a href="#">Players</a></li>
+                                {% for tag in page.tags %}
+                                <li><a href="#">{{ tag }}</a></li>
+                                {% endfor %}
                             </ul>
                         </div>
 

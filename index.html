@@ -221,12 +221,12 @@ layout: home
         
         <div class="row clearfix">
             
-            {% for post in site.posts | limit:3 %}
+            {% for post in site.posts limit:3 %}
             <!-- News Block -->
             <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                 <div class="inner-box hvr-bob">
                     <div class="image">
-                        <a href="blog-single.html"><img src="assets/images/resource/news-1.jpg" alt="" /></a>
+                        <a href="{{ post.url }}"><img src="{{ post.image }}" alt="" /></a>
                     </div>
                     <div class="lower-content">
                         <div class="post-date">{{ post.date | date: "%-d %B %Y"}}</div>

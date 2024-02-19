@@ -2233,7 +2233,7 @@ img{
 	margin-left: 1.5em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Gallery Section
@@ -4690,7 +4690,9 @@ img{
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
+	margin-top: 2rem;
 }
+
 
 .blog-detail .post-info {
 	position: relative;
@@ -4744,14 +4746,30 @@ img{
 	color:#ffffff;	
 }
 
+.blog-detail .lower-content h2{
+	font-weight: 700;
+    text-transform: uppercase;
+	color: #fff;
+}
+
 .blog-detail .lower-content p{
 	position: relative;
 	font-size: 16px;
 	line-height: 32px;
-	color: #848484;
+	color: #999;
 	font-weight: 400;
 }
 
+.blog-detail .lower-content ul{
+	margin-left: 2rem;
+	font-size: 16px;
+	color: #999;
+}
+
+.blog-detail .lower-content li{
+	list-style-type: disc;
+	margin-bottom: 1.5rem;
+}
 
 /*post share options*/
 .post-share-options{
