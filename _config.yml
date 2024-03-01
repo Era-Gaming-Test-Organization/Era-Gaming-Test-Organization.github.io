@@ -27,6 +27,9 @@ description: Write an awesome description for your new site here. You can edit t
   results) and in your feed.xml site description.
 baseurl: ''
 url: ''
+exclude:
+  - Gemfile
+  - Gemfile.lock
 page_gen-dirs: true
 page_gen:
 - data: ContentCreators
@@ -34,6 +37,16 @@ page_gen:
   name: name
   dir: creators
 theme: 
+
+pagination:
+  enabled: true
+  per_page: 3
+  sort_field: 'date'
+  sort_reverse: true
+
 plugins:
 - jekyll-feed
 - jekyll-datapage-generator
+- jekyll-paginate-v2
+
+
